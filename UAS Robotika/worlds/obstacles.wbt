@@ -1,0 +1,88 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/apartment_structure/protos/Wall.proto"
+
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation 0.2710260101118212 -0.26530665931404773 -0.9252876733030042 4.614799809561416
+  position -0.023114187018020288 -3.0567055365532916 2.036306933171419
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 1 1
+}
+WoodenBox {
+  translation -0.330068 0.310552 0.05
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.299932 0.300552 0.05
+  name "wooden box(1)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.329932 -0.309448 0.05
+  name "wooden box(2)"
+  size 0.1 0.1 0.1
+}
+E-puck {
+  hidden position_0_0 421.1718660593488
+  hidden position_0_1 421.1718660873968
+  hidden translation_1 0 0.026000000000000006 0.02
+  hidden rotation_1 0 -1 0 3.3625591851769405
+  hidden translation_2 0 -0.025999999999999985 0.02
+  hidden rotation_2 0 1 0 4.4257254787523195
+  translation 0.148413 -0.366866 -0.00261815
+  rotation 0.0015600171519578735 -0.0015600183672110648 0.9999975663416285 1.5707987580854723
+  controller "epuck_go_forward"
+}
+Solid {
+  translation -0.0434664 -0.030566 0.501333
+  rotation -0.9750868638670626 0.2202352000966282 0.026496500755660388 -2.600797680609451
+  children [
+    DEF DEF-USE_mechanism Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry DEF BALL_GEOMETRY Sphere {
+        radius 0.05
+        subdivision 2
+      }
+    }
+  ]
+  boundingObject USE BALL_GEOMETRY
+  physics Physics {
+  }
+}
+Wall {
+  translation -0.55 0 0
+  size 0.1 1 0.1
+}
+Wall {
+  translation 0.55 0 0
+  name "wall(1)"
+  size 0.1 1 0.1
+}
+Wall {
+  translation -6.74634e-14 -0.55 0
+  rotation 0 0 1 1.5708
+  name "wall(2)"
+  size 0.1 1 0.1
+}
+Wall {
+  translation -4.04042e-06 0.55 0
+  rotation 0 0 1 1.5708
+  name "wall(3)"
+  size 0.1 1 0.1
+}
